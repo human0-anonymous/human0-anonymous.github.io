@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-55NDKMPMDH"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+
+		gtag('config', 'G-55NDKMPMDH');
+	</script>
+
+  <meta charset="utf-8">
+  <meta name="description" content="IN-N-ON: SCALING EGOCENTRIC MANIPULATION WITH IN-THE-WILD AND ON-TASK DATA">
+  <meta name="keywords" content="Humanoid Manipulation, Robotics">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Human Policy</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <!-- <link rel="stylesheet" href="./static/css/fontawesome.all.min.css"> -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <script src="https://www.youtube.com/iframe_api"></script>
+  <script src="./static/js/ajax.googleapis.com_ajax_libs_jquery_3.5.1_jquery.min.js"></script>
+  <script src="./static/js/isInViewport.min.js"></script>
+  <!-- <script defer src="./static/js/fontawesome.all.min.js"></script> -->
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+
+  <link rel="icon" href="./resources/favicon.ico">
+  
+  <script src="https://kit.fontawesome.com/006a5775d5.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">
+            IN-N-ON: SCALING EGOCENTRIC MANIPULATION WITH IN-THE-WILD AND ON-TASK DATA
+          </h1>
+          <div class="is-size-4 publication-authors">
+            <span class="author-block">
+              Anonymous authors
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <section class="section" style="padding-top: 0px;">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-full-width">
+          <tr>
+            <td>
+              <div class="row">
+                <div class="col">
+                  <center>
+                    <img src="./resources/in-n-out/teaser_v7.png" width="65%"></img>
+                  </center>
+                </div>
+              </div>
+            </td>
+          </tr>
+        </div> 
+      </div>
+    </div>
+  </section>
+
+
+  <section class="section" style="padding-top: 0px;">
+    <div class="container">
+      <!-- Abstract. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-two-thirds">
+          <h2 class="title is-2">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              Egocentric videos are a valuable and scalable data source to learn manipulation policies. However, 
+              due to significant data heterogeneity, most existing approaches utilize human data for simple pre-training, 
+              which does not unlock its full potential. This paper provides a recipe for collecting and using egocentric 
+              data by categorizing human data into two categories: <b>in-the-wild</b> and <b>on-task</b>. We first curate a dataset, <b>PH<sup>S</sup>D</b>, 
+              which contains over 1,000 hours of diverse in-the-wild egocentric data and over 20 hours of on-task data directly 
+              aligned to the target manipulation tasks. This enables learning a large egocentric language-conditioned flow matching 
+              policy, <b>Human<sub>0</sub></b>. We further adopt domain adaptation techniques to align the gap between humans and humanoids. 
+              Empirically, we show Human<sub>0</sub> achieves several novel properties, including language following of instructions 
+              from only human data, few-shot learning, and improved robustness using on-task data. For full reproducibility, 
+              we plan to release the dataset, base weights, and code upon acceptance.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  <section class="section">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-full-width">
+          <h2 class="title is-2" style="text-align: center; padding-bottom: 10px;">Method Overview</h2>
+          <tr>
+            <td>
+              <div class="row">
+                <div class="col">
+                  <center>
+                    <img src="./resources/in-n-out/arch_v5.png" width="65%"></img>
+                  </center>
+                </div>
+              </div>
+            </td>
+          </tr>
+        </div> 
+      </div>
+    </div>
+  </section>
+
+    <section class="section">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-full-width">
+          <h2 class="title is-2" style="text-align: center; padding-bottom: 10px;">On-task data collection</h2>
+          <tr>
+            <td>
+              <div class="row">
+                <div class="col">
+                    <h5>H1 robot with inspire hands</h5>
+                    <video autoplay muted loop playsinline controls src="./resources/in-n-out/h1_data_compressed.mp4" width="100%"
+                           style="border-radius:10px; "></video>
+                </div>
+                <div class="col">
+                  <h5>G1 robot with inspire hands</h5>
+                  <video autoplay muted loop playsinline controls src="resources/in-n-out/g1_data_compressed.mp4" width="100%"
+                         style="border-radius:10px; "></video>
+                </div>
+              </div>
+              <br>
+              <div class="row">
+                <div class="col">
+                    <h5>Human data with apple vision pro</h5>
+                    <video autoplay muted loop playsinline controls src="./resources/in-n-out/avp_data_compressed.mp4" width="100%"
+                           style="border-radius:10px; "></video>
+                </div>
+                <div class="col">
+                  <h5>Human data with aria glasses</h5>
+                  <video autoplay muted loop playsinline controls src="resources/in-n-out/aria_kp_compressed.mp4" width="100%"
+                         style="border-radius:10px; "></video>
+                </div>
+              </div>
+              <br>
+              <div class="row">
+                <div class="col">
+                    <h5>Human data with apple vision pro (w/ keypoints)</h5>
+                    <video autoplay muted loop playsinline controls src="./resources/in-n-out/avp_kp_compressed.mp4" width="100%"
+                           style="border-radius:10px; "></video>
+                </div>
+                <div class="col">
+                  <h5>Human data with aria glasses (w/ keypoints)</h5>
+                  <video autoplay muted loop playsinline controls src="resources/in-n-out/aria_kp_compressed.mp4" width="100%"
+                         style="border-radius:10px; "></video>
+                </div>
+              </div>
+            </td>
+          </tr>
+        </div> 
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-full-width">
+          <h2 class="title is-2" style="text-align: center; padding-bottom: 10px;">Post-training Improves Generalizability</h2>
+          <tr>
+            <td>
+              <!-- <div class="row">
+                <div class="col">
+                    <h3>Single Object Grasping Generalization</h3>
+                </div>
+              </div>
+              <br> -->
+
+              <div class="row">
+                <div class="col">
+                  <h5 style="font-weight: 700; color: #111; margin-bottom: 0.4rem;">
+                    Seen in robot data:<br>
+                    <span style="font-weight: 600;">blue pepsi bottle</span>,
+                    <span style="font-weight: 600;">coconut water carton</span>,
+                    <span style="font-weight: 600;">mentos can</span>,
+                    <span style="font-weight: 600;">pringles can</span>
+                  </h5>
+                  <h5 style="font-weight: 700; color: #111; margin-bottom: 1rem; padding-top: 10px;">
+                    Not seen in both robot and human data:<br>
+                    <span style="font-weight: 600;">red party cup</span>,
+                    <span style="font-weight: 600;">stainless steel cup</span>,
+                    <span style="font-weight: 600;">tomato ketchup bottle</span>,
+                    <span style="font-weight: 600;">cookie box</span>
+                  </h5>
+                  <video autoplay muted loop playsinline controls src="resources/in-n-out/single_object_compressed.mp4" width="50%"
+                           style="border-radius:10px; "></video>
+
+                </div>
+              </div>
+              <br>
+              </div>
+            </div>
+            </td>
+          </tr>
+
+          <h2 class="title is-2" style="text-align: center; padding-bottom: 10px; padding-top: 30px;">Post-training Improves Zero-shot Language Following</h2>
+
+          <tr>
+            <td>
+              <div class="row">
+                <div class="col">
+                    <h3>In the Wild</h3>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col">
+                    <h5>Seen in robot data: blue pepsi bottle</h5>
+                    <video autoplay muted loop playsinline controls src="./resources/in-n-out/multi_object_pepsi_compressed.mp4" width="100%"
+                           style="border-radius:10px; "></video>
+                </div>
+                <div class="col">
+                  <h5>Seen in human data: yellow mustard bottle</h5>
+                  <video autoplay muted loop playsinline controls src="resources/in-n-out/multi_object_mustard_compressed.mp4" width="100%"
+                         style="border-radius:10px; "></video>
+                </div>
+              </div>
+              <br>
+
+              <div class="row">
+                <div class="col">
+                    <h3>Background Generalization</h3>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col">
+                    <h5>Seen in robot data: coconut water carton</h5>
+                    <!-- <h5>Novel background: Black tablecloth</h5> -->
+
+                    <video autoplay muted loop playsinline controls src="./resources/in-n-out/multi_object_coconut_compressed.mp4" width="100%"
+                           style="border-radius:10px; "></video>
+                </div>
+                <div class="col">
+                  <h5>Seen in human data: protein drink bottle</h5>
+                  <!-- <h5>Novel background: Floral tablecloth</h5> -->
+                  <video autoplay muted loop playsinline controls src="resources/in-n-out/multi_object_protein_compressed.mp4" width="100%"
+                         style="border-radius:10px; "></video>
+                </div>
+              </div>
+              <br>
+            </tr>
+          </tr>
+
+          <h2 class="title is-2" style="text-align: center; padding-bottom: 10px;padding-top: 30px;">Post-training Improves On-task Performance</h2>
+          <div class="row">
+            <div class="col">
+                <h5>Seen in robot data: Lettuce</h5>
+                <video autoplay muted loop playsinline controls src="./resources/in-n-out/burger_lettuce_compressed.mp4" width="100%"
+                        style="border-radius:10px; "></video>
+            </div>
+            <div class="col">
+              <h5>Seen in human data: mozzarella cheese</h5>
+              <video autoplay muted loop playsinline controls src="resources/in-n-out/burger_mozzarella_compressed.mp4" width="100%"
+                      style="border-radius:10px; "></video>
+            </div>
+          </div>
+          <br>
+
+
+          <h2 class="title is-2" style="text-align: center; padding-bottom: 10px; padding-top: 20px;">Post-training Improves Few-shot Generalization</h2>
+          <div class="row">
+            <div class="col">
+                <video autoplay muted loop playsinline controls src="./resources/in-n-out/pouring_compressed.mp4" width="50%"
+                        style="border-radius:10px; "></video>
+            </div>
+          </div>
+          <br>
+
+        </div> 
+      </div>
+    </div>
+  </section>
+
+
+
+</body>
+
+</html>
